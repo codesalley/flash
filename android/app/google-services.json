@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "286822720118",
+    "firebase_url": "https://flash-chat-54775.firebaseio.com",
+    "project_id": "flash-chat-54775",
+    "storage_bucket": "flash-chat-54775.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286822720118:android:c6aa06e645678ce2ddb557",
+        "android_client_info": {
+          "package_name": "co.codesalley.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286822720118-15nic71v37ekdr80k89nbu4v1ie4isvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3RO_uMJ9Oy7phoVWrCXbsCncrU_sZxOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286822720118-15nic71v37ekdr80k89nbu4v1ie4isvf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "286822720118-ph0gutp5hpbchmttjsi3qd9g2ud88pht.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "co.juxsalley.flashChat"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286822720118:android:4b6b3d9bcdf1c86addb557",
+        "android_client_info": {
+          "package_name": "co.juxsalley.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286822720118-15nic71v37ekdr80k89nbu4v1ie4isvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3RO_uMJ9Oy7phoVWrCXbsCncrU_sZxOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286822720118-15nic71v37ekdr80k89nbu4v1ie4isvf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "286822720118-ph0gutp5hpbchmttjsi3qd9g2ud88pht.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "co.juxsalley.flashChat"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
