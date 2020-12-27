@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flash_chat/constants.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
@@ -11,6 +12,7 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
+  final messageTextController = TextEditingController();
   FirebaseAuth firebaseAuth = FirebaseAuth.instance;
   FirebaseUser user;
   String messageText;
@@ -34,9 +36,8 @@ class _ChatScreenState extends State<ChatScreen> {
 
   @override
   void initState() {
-    getCurrentUser();
-
     super.initState();
+    getCurrentUser();
   }
 
   @override
@@ -69,6 +70,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 children: <Widget>[
                   Expanded(
                     child: TextField(
+                      controller: messageTextController,
                       onChanged: (value) {
                         messageText = value;
                       },
@@ -77,6 +79,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   ),
                   FlatButton(
                     onPressed: () {
+                      messageTextController.clear();
                       firestore.collection('messages').add({
                         'sender': user.email,
                         'text': messageText,
@@ -113,7 +116,13 @@ class MessageStream extends StatelessWidget {
       stream: firestore.collection('messages').snapshots(),
       builder: (context, snapshot) {
         if (!snapshot.hasData) {
-          return ModalProgressHUD(inAsyncCall: true, child: Center());
+          return ModalProgressHUD(
+            inAsyncCall: true,
+            child: Container(
+              width: 200,
+              height: 200,
+            ),
+          );
         }
         final messages = snapshot.data.documents;
 
